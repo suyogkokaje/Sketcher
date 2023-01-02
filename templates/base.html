@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Coding By TA Learners - youtube.com/TA Learners -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketcher</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <link href="https://cdn.rawgit.com/shabuninil/fileup/master/src/fileup.min.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/shabuninil/fileup/master/src/fileup.min.js"></script>
+</head>
+
+<body>
+    {% block content %}{% endblock %}
+    <script src="{{ url_for('static',filename='js/script.js') }}">
+        function myFunction() {
+            var inpObj = document.getElementById("");
+            if (!inpObj.checkValidity()) {
+                document.getElementById("geeks")
+                          .innerHTML = inpObj.validationMessage;
+            } else {
+                document.getElementById("geeks")
+                          .innerHTML = "Input is ALL RIGHT";
+            }
+        }
+    </script>
+
+</body>
+</html>

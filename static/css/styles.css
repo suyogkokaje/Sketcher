@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #603280;
+}
+
+::selection {
+    color: #fff;
+    background: #9562b6;
+}
+
+.container {
+    width: 430px;
+    background: #E2E3DE;
+    border-radius: 5px;
+    padding: 30px;
+    box-shadow: 7px 7px 12px rgba(0, 0, 0, 0.05);
+}
+
+.container header {
+    color: #603280;
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container #Select-area {
+    height: 167px;
+    display: flex;
+    cursor: pointer;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 5px;
+    border: 2px dashed #9562b6;
+}
+
+#Select-area :where(i, p) {
+    color: #9562b6;
+    font-weight: bold;
+}
+
+#Select-area i {
+    font-size: 50px;
+}
+
+#Select-area p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+.btn-convert {
+    padding: 10px 25px;
+    margin-left: 28%;
+    margin-top: 10%;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    background: #603280;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.preview {
+    box-shadow: 10px black;
+    margin-top: 5%;
+    text-align: center;
+
+}
+
+img#file-preview {
+    width: 100% !important;
+    border-radius: 4px;
+}
+
+#remove-img {
+    color: #603280;
+    margin-top: 10%;
+}
+
+a#donwloadBtn {
+    display: block !important;
+    margin-top: 5% !important;
+    text-decoration: none;
+    margin-left: 35%;
+    width: 31%;
+}

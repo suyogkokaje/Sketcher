@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <header>Image To Sketch Converter</header>
+    <form method="POST" action="{{url_for('upload_file')}}" enctype="multipart/form-data" >
+        <div id="Select-area">
+            <input class="file-input" type="file" name="file" hidden required>
+            <i class="fas fa-file-image"></i>
+            <p>Select File </p>
+        </div>
+        <div class="preview" id="preview">
+            <img id="file-preview">
+            <i class="fas fa-trash" id="remove-img"></i>
+        </div>
+        {% if file_url %}
+        <a href="{{file_url}}" id="donwloadBtn" class="btn-convert" download>Download</a>
+        <script>
+            let area = document.getElementById('Select-area');
+            let preview = document.getElementById("file-preview");
+            let remove_img = document.getElementById("remove-img");
+            // Some Element CHanges
+            area.style.display = "none";
+            remove_img.style.display = "none";
+            preview.src = "{{file_url}}";
+        </script>
+        {% else %}
+        <input type="submit" id='validate' class="btn-convert" value="Convert To Sketch">
+        {% endif %}
+    </form>
+</div>
+{% endblock %}
